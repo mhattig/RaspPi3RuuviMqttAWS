@@ -1,0 +1,14 @@
+[Unit]
+Description=Run python code that receives Ruuvi tag beacon data and send data to AWS IOT
+After=multi-user.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+ExecStart=/usr/bin/python /home/pi/Gateway/ruuvi_observer.py 
+StandardOutput=append:/home/pi/Gateway/RuuviSensors.log
+StandardError=append:/home/pi/Gateway/RuuviSensors.log
+
+[Install]
+WantedBy=multi-user.target

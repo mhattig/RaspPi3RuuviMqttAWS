@@ -1,0 +1,12 @@
+[Unit]
+Description=Run python code that reboots the system if ruuvi_sensor.py stops
+After=multi-user.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+ExecStart=/usr/bin/python /home/pi/Gateway/ruuvi_watchdog.py 
+
+[Install]
+WantedBy=multi-user.target
