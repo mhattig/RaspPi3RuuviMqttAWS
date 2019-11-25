@@ -17,12 +17,12 @@ STILL_ALIVE_COUNT_DOWN = 10 # Count down to save still alive str
 
 # TLS connection cert related files
 cafile_filename='./RootCA.pem'
-cert_filename='./Gateway99_cert.pem'
-key_filename='./Gateway99_private_key.pem'
+cert_filename='./thingA_cert.pem'
+key_filename='./thingA_private_key.pem'
 
 # AWS Iot end-point
-client_id='Gateway99'
-endpoint='a27xdhuepxh1ys-ats.iot.us-west-2.amazonaws.com'
+client_id='thingA'
+endpoint='XXXXXX-ats.iot.us-west-2.amazonaws.com'
 
 # Output file where JSON is stored from Ruuvi sensors
 outfile='/home/pi/Gateway/RuuviSensors.json'
